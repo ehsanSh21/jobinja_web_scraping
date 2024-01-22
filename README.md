@@ -6,6 +6,7 @@ This web scraping project is designed to automate the process of collecting and 
 
 1. [Key Features](#key-features)
 2. [Technologies Used](#technologies-used)
+3. [Entity Relationship Diagram](#entity-relationship-diagram)
 
 ## Key Features
 
@@ -39,5 +40,12 @@ This web scraping project is designed to automate the process of collecting and 
 - **BeautifulSoup:** Extracts structured information from HTML and XML files.
 - **Requests:** Makes web requests for efficient data retrieval.
 - **SQLAlchemy ORM:** Provides a high-level interface for interacting with databases.
+
+## Entity Relationship Diagram:
+
+<img src="https://github.com/ehsanSh21/jobinja_web_scraping/blob/master/webscraping21.png" alt="Database Diagram" width="700" height="800">
+
+
+
 
 This project combines web scraping, automation, and database management to empower users in exploring and analyzing job opportunities effortlessly.
