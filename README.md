@@ -1,41 +1,43 @@
-## Overview
+# Project Overview
 
 This web scraping project is designed to automate the process of collecting and analyzing job data from a specific job portal. Leveraging the power of tools such as **Selenium**, **BeautifulSoup**, **Requests**, and **SQLAlchemy ORM**, this project aims to streamline the extraction and storage of valuable job-related information.
 
-### Key Features:
+## Table of Contents
 
-- **Targeted Job Scraping:**
-  - Begin by providing a specific job link of interest.
-  - Extract comprehensive details for the specified job, including title, salary, category, skills required, location, and insights about the associated company.
+1. [Key Features](#key-features)
+2. [Technologies Used](#technologies-used)
 
-- **Automated Search Operation:**
-  - Utilize **Selenium** for automating the search functionality on the job portal.
-  - Dynamically input job title, location, and category based on the data obtained for the specific job.
-  - Execute a search to retrieve a list of relevant job opportunities.
+## Key Features
 
-- **Detailed Job List Scrapping:**
-  - For each job in the search results, systematically scrape and store job details similar to the initial specific job.
-  - Maintain a database to efficiently organize and manage the accumulated job-related data.
+### 1. Targeted Job Scraping
 
-- **SQL Query for Job Matching:**
-  - Implement a targeted SQL query to identify jobs related to the specific job based on shared skills.
-  - Consider the similarity of job categories for each company to enhance result accuracy.
+- Provide a specific job link.
+- Extract details such as title, salary, category, skills, location, and company insights.
 
-- **CSV Export of Results:**
-  - Compile and export the titles and links of related jobs into a CSV file for convenient reference.
+### 2. Automated Search Operation
 
-### Technologies Used:
+- Use **Selenium** to automate job searches.
+- Dynamically input job details for an automated search operation.
 
-- **Selenium:**
-  - A powerful tool for automating web browser interactions, enabling seamless navigation and data collection.
+### 3. Detailed Job List Scrapping
 
-- **BeautifulSoup:**
-  - A Python library for pulling data out of HTML and XML files, facilitating the extraction of structured information from web pages.
+- Scrape and store details for each job in search results.
+- Maintain a database for organized data management.
 
-- **Requests:**
-  - A simple HTTP library for making web requests, enhancing the efficiency of data retrieval.
+### 4. SQL Query for Job Matching
 
-- **SQLAlchemy ORM:**
-  - An Object-Relational Mapping (ORM) library for Python, providing a convenient and high-level interface for interacting with databases.
+- Implement SQL queries to identify related jobs based on shared skills.
+- Consider the similarity of job categories for each company.
 
-This project aims to empower users to effortlessly explore and analyze job opportunities by combining the capabilities of web scraping, automation, and database management.
+### 5. CSV Export of Results
+
+- Compile and export related job titles and links into a CSV file.
+
+## Technologies Used
+
+- **Selenium:** Automates web browser interactions for seamless navigation.
+- **BeautifulSoup:** Extracts structured information from HTML and XML files.
+- **Requests:** Makes web requests for efficient data retrieval.
+- **SQLAlchemy ORM:** Provides a high-level interface for interacting with databases.
+
+This project combines web scraping, automation, and database management to empower users in exploring and analyzing job opportunities effortlessly.
