@@ -146,7 +146,7 @@ class JobScraper:
         existing_job = session.query(Job).filter_by(id=id).first()
         if not existing_job:
             #insert into jobs
-            new_job=Job(id=id,title=job_title,company_id=company_id,link=self.url,
+            new_job=Job(id=id,title=job_title,company_id=company_id,link=idURL,
                     experience_years_min=experience,category=category,province=province,city=city)
             session.add(new_job)
             session.commit()
