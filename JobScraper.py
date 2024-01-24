@@ -3,18 +3,12 @@ from bs4 import BeautifulSoup
 from Convertor import Convertor
 import re
 from urllib.parse import urlparse
-from sqlalchemy import create_engine,ForeignKey ,Column, Integer, String, CHAR, Sequence
-# from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine, Column, Integer, String, Text, Date, DECIMAL, ForeignKey, Table
-from sqlalchemy.orm import declarative_base, relationship
-import sys
 from models import Base, Company, Job, Skill, JobSkill, Category, company_categories
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 import time
 from sqlalchemy.orm import joinedload
 from sqlalchemy import exists
@@ -24,11 +18,10 @@ class JobScraper:
     def __init__(self, url):
         self.url = url
 
-    def get_company_name(self):
+    def get_job_scrapping(self):
         # connect to database:
         # Define the SQLite database engine
         engine = create_engine('sqlite:///C:/Users/hp/PycharmProjects/pythonProject/webscraping21.db', echo=True)
-        # Base.metadata.create_all(engine)
 
         # Create a session to interact with the database
         Session = sessionmaker(bind=engine)
@@ -117,7 +110,6 @@ class JobScraper:
                 # Get the next sibling of this div
                 next_sibling = div.find_next_sibling()
                 if next_sibling:
-                    # skills = next_sibling.span.get_text(strip=True)
                     skills = next_sibling
                 break
 
@@ -190,15 +182,6 @@ class JobScraper:
         driver = webdriver.Chrome(service=service)
         driver.get(website)
         driver.implicitly_wait(10)
-
-        # company_jobs_div = driver.find_element(By.CSS_SELECTOR,
-        #                                            ".c-companyHeader__navigatorContainer.container.u-clearFix")
-        #
-        # company_headers = company_jobs_div.find_elements(By.CSS_SELECTOR, ".c-companyHeader__navigatorLink")
-        # for header in company_headers:
-        #     a_element = header.find_element(By.TAG_NAME,"a")
-        #     print(a_element.text)
-        #     sys.exit()
 
         company_jobs_div = driver.find_element(By.CSS_SELECTOR,
                                                ".c-companyHeader__navigatorContainer.container.u-clearFix ul")
