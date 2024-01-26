@@ -116,6 +116,15 @@ ORDER BY sub1.matching_skills DESC, sub2.matching_company_category DESC
 
 ```
 
+##### Sample output: 
+| ID      | Title                                          | Link                                      | Matching Skills | Matching Company Category | Total |
+|---------|------------------------------------------------|-------------------------------------------|------------------|---------------------------|-------|
+| 1083560 | استخدام PHP/Laravel) Senior Back-End Developer-مشهد | (https://jobinja.ir/1083560)        | 3                | 2                         | 8     |
+| 1113261 | استخدام برنامه‌نویس PHP (مشهد)                | (https://jobinja.ir/1113261)        | 3                | 1                         | 7     |
+| 670416  | استخدام Back-End Developer (PHP-مشهد)          | (https://jobinja.ir/670416)         | 2                | 2                         | 6     |
+| 1125967 | استخدام برنامه‌نویس PHP/Laravel) Back-End-مشهد-دورکاری | (https://jobinja.ir/1125967)   | 2                | 2                         | 6     |
+
+
 
 
 
